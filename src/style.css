@@ -1,14 +1,16 @@
 @import '~material-design-icons/iconfont/material-icons.css';
 
-body {
+html, body {
   margin: 0;
   padding: 0;
+  height: 100vh;
+  --offwhite: rgb(231, 231, 231);
 }
 
 /* navbar styles */
 
 .navbar-icons {
-  color: white;
+  color: var(--offwhite);
   font-size: 2rem;
   cursor: pointer;
 }
@@ -62,3 +64,31 @@ nav .right {
   border: none;
   outline: none;
 }
+
+/* content styles */
+
+.content {
+  display: flex;
+  height: calc(100% - 60px);
+  width: 100%;
+}
+
+.content .right {
+  flex: 3;
+  height: 100%;
+  background-color: var(--offwhite);
+}
+
+.content .left {
+  flex: 1;
+  height: 100%;
+  background-color: rgb(218, 218, 218);
+  min-width: 350px;
+}
+
+.content .left.collapsed {
+   flex: 0;
+   min-width: 0;
+}
+
+
