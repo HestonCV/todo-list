@@ -9,25 +9,39 @@
   <body>
     <nav>
       <div class="left">
-        <i class="material-icons navbar-icons" id="collapse-icon">menu</i>
-        <i class="material-icons navbar-icons">home</i>
+        <div class="icon-container"><i class="material-icons navbar-icons" id="collapse-icon">menu</i></div>
+        <div class="icon-container"><i class="material-icons navbar-icons">home</i></div>
         <div class="search-bar searchbar-icon">
           <i class="material-icons">search</i>
           <form action="">
-            <input type="text">
+            <input type="text" placeholder="Search">
           </form>
         </div>
       </div>
       <div class="right">
-        <i class="material-icons navbar-icons">add</i>
+        <div class="icon-container"><i class="material-icons navbar-icons">add</i></div>
       </div>
     </nav>
     <div class="content">
       <div class="left collapsed">
-
+        <div class="time-view-container">
+          <div class="time-view active"><i class="material-icons today">today</i>Today</div>
+          <div class="time-view"><i class="material-icons upcoming">date_range</i>Upcoming</div>
+        </div>
+        <div class="project-container">
+          <div class="project-header">
+            <h1>Projects</h1>
+            <i class="material-icons project-icons">add</i>
+          </div>
+        </div>
       </div>
       <div class="right">
-        
+        <div class="content-container">
+          <div class="today-header">
+            <h1></h1>
+            <span></span>
+          </div>
+        </div>
       </div>
     </div>
     <script src="./bundle.js"></script>
