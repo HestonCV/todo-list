@@ -5,6 +5,7 @@
 @import url('./contentRight.css');
 @import url('./navbar.css');
 @import url('./task.css');
+@import url('./projects.css');
 
 html, body {
   font-family: 'Outfit', sans-serif;

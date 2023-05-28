@@ -1,0 +1,51 @@
+/* projects styles */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  padding-left: 8px;
+  border-radius: 5px;
+}
+
+.project-header h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.project-header:hover {
+  background-color: rgb(225, 225, 225);
+  cursor: pointer;
+}
+
+/* project styles */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: rgb(232, 232, 232);
+  padding: 8px 3px;
+  border-radius: 5px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.color-identifier {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: red;
+}
+
+.color-identifier2 {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: rgb(18, 172, 224);
+}
