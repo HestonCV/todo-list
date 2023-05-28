@@ -1,1 +1,64 @@
 @import '~material-design-icons/iconfont/material-icons.css';
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar styles */
+
+.navbar-icons {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  height: 50px;
+  background-color: #de483a;
+}
+
+nav .left {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 20px;
+}
+
+nav .right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.searchbar-icon {
+  color: rgb(75, 75, 75);
+  cursor: pointer;
+}
+
+.search-bar {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.743);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3px;
+  width: max(50%, 260px);
+  height: 18px;
+  padding: 5px;
+}
+
+.search-bar input {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(97, 97, 97);
+  width: 200px;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.search-bar input:focus {
+  border: none;
+  outline: none;
+}
