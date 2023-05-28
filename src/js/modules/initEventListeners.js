@@ -3,17 +3,14 @@ function initNavBarEventListeners() {
   const collapseIcon = document.getElementById("collapse-icon");
   collapseIcon.addEventListener("click", () => {
     const sideBar = document.querySelector(".content .left");
-    if (sideBar.classList.contains("collapsed")) {
-      sideBar.classList.remove("collapsed");
-    } else {
-      sideBar.classList.add("collapsed");
-    }
+    sideBar.classList.toggle("collapsed");
   });
 
   // home button
   const homeButton = document.getElementById("home-icon");
   homeButton.addEventListener("click", () => {
     // TODO: load today page
+    console.log("home");
   });
 
   // search bar
@@ -30,35 +27,49 @@ function initNavBarEventListeners() {
 
 function initSideBarEventListeners() {
   // today view button
-  const todayViewButton = document.querySelector(".today");
+  const todayViewButton = document.getElementById("today");
   todayViewButton.addEventListener("click", () => {
     // TODO: load today page
+    console.log("today view");
   });
 
   // upcoming view button
-  const upcomingViewButton = document.querySelector(".upcoming");
+  const upcomingViewButton = document.getElementById("upcoming");
   upcomingViewButton.addEventListener("click", () => {
     // TODO: load upcoming page
+    console.log("upcoming view");
   });
 
   // completed view button
-  const completedViewButton = document.querySelector(".completed");
+  const completedViewButton = document.getElementById("completed");
   completedViewButton.addEventListener("click", () => {
     // TODO: load completed view button
+    console.log("completed view");
   });
 
   // add project button
   const addProjectButton = document.querySelector(".project-header");
   addProjectButton.addEventListener("click", () => {
     // TODO: call add project module
+    console.log("add project");
   });
 }
 
-function initTodayEventListeners() {}
+function initTodayEventListeners() {
+  const addTaskButton = document.querySelector(".add-task");
+  addTaskButton.addEventListener("click", () => {
+    // TODO: call add task module
+    console.log("add task");
+  });
+}
 
-function initUpcomingEventListeners() {}
+function initUpcomingEventListeners() {
+  // TODO
+}
 
-function initCompletedEventListeners() {}
+function initCompletedEventListeners() {
+  // TODO
+}
 
 export {
   initNavBarEventListeners,

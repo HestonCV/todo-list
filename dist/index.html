@@ -13,7 +13,7 @@
         <div class="icon-container"><i class="material-icons navbar-icons" id="home-icon">home</i></div>
         <div class="search-bar">
           <i class="material-icons searchbar-icon">search</i>
-          <form action="" id="search-bar-form">
+          <form action="" id="search-bar-form" autocomplete="off">
             <input type="text" placeholder="Search" id="search-bar">
           </form>
         </div>
@@ -25,9 +25,9 @@
     <div class="content">
       <div class="left">
         <div class="view-container">
-          <div class="view selected"><i class="material-icons today">today</i>Today</div>
-          <div class="view"><i class="material-icons upcoming">date_range</i>Upcoming</div>
-          <div class="view"><i class="material-icons completed">check_circle</i>Completed</div>
+          <div class="view selected" id="today"><i class="material-icons today">today</i>Today</div>
+          <div class="view" id="upcoming"><i class="material-icons upcoming">date_range</i>Upcoming</div>
+          <div class="view" id="completed"><i class="material-icons completed">check_circle</i>Completed</div>
         </div>
         <div class="project-container">
           <div class="project-header">
@@ -53,7 +53,7 @@
               <h1>Today</h1>
               <span>Sat May 27</span>
             </div>
-            <div class="add-task"><i class="material-icons">add</i>Add Task</div>
+            <div class="add-task"><i class="material-icons">add</i><span>Add Task</span></div> <!-- left off here -->
           </div>
           <div class="task-container">
             <div class="task">
