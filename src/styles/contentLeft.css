@@ -1,0 +1,80 @@
+
+/* left content styles */
+.content > .left {
+  flex: 1;
+  background-color: rgb(238, 238, 238);
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  padding-top: 40px;
+  padding-right: 25px;
+  overflow-y: auto;
+  color: var(--sidebar-font-color)
+}
+
+.content .left.collapsed {
+   flex: 0;
+   display: none;
+   min-width: 0;
+}
+
+.view-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.view {
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.view.selected {
+  background-color: rgb(225, 225, 225);
+}
+
+.view:hover {
+  background-color: rgb(225, 225, 225);
+  cursor: pointer;
+}
+
+.today {
+  color: #3277dd;
+}
+
+.upcoming {
+  color: #d0645a;
+}
+
+.completed {
+  color: #4b9244;
+}
+
+/* projects styles */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.project-header h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.project-header:hover {
+  background-color: rgb(225, 225, 225);
+  cursor: pointer;
+}
+

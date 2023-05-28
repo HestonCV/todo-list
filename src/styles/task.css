@@ -1,0 +1,50 @@
+/* task-styles */
+.task-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  padding-bottom: 30px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(236, 236, 236);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.task > .left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.task-name {
+  font-size: 1.3rem;
+  color: var(--sidebar-font-color)
+}
+
+.checked {
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.checked:hover {
+  background-color: rgb(218, 218, 218);
+}
+
+.task > .right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  color: rgb(117, 117, 117);
+}
+
+.task-buttons:hover {
+  cursor: pointer;
+  color: rgb(162, 162, 162);
+}
