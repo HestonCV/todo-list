@@ -7,10 +7,12 @@ import {
   initCompletedEventListeners,
 } from "./modules/initEventListeners";
 
+import createProjectElement from "./modules/projectsView";
 import { loadTodayView, clearView } from "./modules/loadViews";
+import TodoController from "./modules/todoController";
 
+const todoController = new TodoController();
 initNavBarEventListeners();
 initSideBarEventListeners();
-clearView();
-loadTodayView();
-initTodayEventListeners();
+
+todoController.addProject("Work", "purple");

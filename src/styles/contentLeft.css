@@ -29,6 +29,7 @@
 
 .view {
   padding: 5px;
+  padding-right: 0;
   border-radius: 5px;
   display: flex;
   align-items: center;

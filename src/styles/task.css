@@ -44,6 +44,16 @@
   color: rgb(117, 117, 117);
 }
 
+.project-indicator {
+  color: red;
+  cursor: pointer;
+}
+
+.project-indicator2 {
+  color: rgb(18, 172, 224);
+  cursor: pointer;
+}
+
 .task-buttons:hover {
   cursor: pointer;
   color: rgb(162, 162, 162);
