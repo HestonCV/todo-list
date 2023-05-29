@@ -9,21 +9,37 @@ class TodoController {
     this.projects = [];
   }
 
-  addTask(title, projectId) {
+  addTask(title, dueDate, projectId) {
+    // generate unique id for task
     const id = uuidv4();
-    /*  const project
-    const newTask = new Task(title, projectId, id);
- */
 
-    /*  this.tasks.push(newTask); */
+    const newTask = new Task(title, dueDate, projectId, id);
+    this.tasks.push(newTask);
+
+    // check if a project was selected, if it was, add task to project object
+    if (projectId !== 0) {
+      const projectMatch = this.projects.find(
+        (project) => project.id === projectId
+      );
+      projectMatch.addTask(newTask);
+    }
+
+    // TODO: create task element
   }
 
   addProject(title, color) {
+    // generate unique id for project
     const id = uuidv4();
+
+    // create project
     const newProject = new Project(title, color, id);
     this.projects.push(newProject);
+
+    // create project element
     createProjectElement(newProject);
   }
 }
 
-export default TodoController;
+const todoController = new TodoController();
+
+export default todoController;

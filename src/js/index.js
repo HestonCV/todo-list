@@ -9,10 +9,9 @@ import {
 
 import createProjectElement from "./modules/projectsView";
 import { loadTodayView, clearView } from "./modules/loadViews";
-import TodoController from "./modules/todoController";
+import todoController from "./modules/todoController";
+import projectForm from "./modules/projectForm";
 
-const todoController = new TodoController();
 initNavBarEventListeners();
 initSideBarEventListeners();
-
-todoController.addProject("Work", "purple");
+projectForm.init();

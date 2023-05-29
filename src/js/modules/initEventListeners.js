@@ -50,8 +50,7 @@ function initSideBarEventListeners() {
   // add project button
   const addProjectButton = document.querySelector(".project-header");
   addProjectButton.addEventListener("click", () => {
-    // TODO: call add project module
-    console.log("add project");
+    // TODO: get title and color from form
   });
 }
 
