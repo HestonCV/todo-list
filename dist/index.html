@@ -72,8 +72,13 @@
               <label for="task-title">Name</label>
               <input type="text" id="task-title">
               <label for="task-project">Project</label>
-              <input type="text" id="task-project">
+              <select id="task-project">
+                <option value="0">None</option> <!-- This is your default option -->
+              </select>
+              <label for="task-deadline">Deadline</label>
+              <input type="text" id="task-deadline">
             </section>
+            <button type="submit"></button>
           </form>
           <div class="task-container">
             <div class="task">

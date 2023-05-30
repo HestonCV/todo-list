@@ -1,4 +1,5 @@
 import { createElement } from "./createElement";
+import taskForm from "./taskForm";
 
 function createProjectElement(project) {
   const projects = document.querySelector(".projects");
@@ -26,6 +27,9 @@ function createProjectElement(project) {
     textContent: project.title,
     parent: projectElement,
   });
+
+  taskForm.populateProjectDropdown();
+  console.log("createProjectElement");
 }
 
 export default createProjectElement;

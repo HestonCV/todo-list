@@ -10,11 +10,11 @@ class TodoController {
     this.projects = [];
   }
 
-  addTask(title, dueDate, projectId) {
+  addTask(title, deadline, projectId) {
     // generate unique id for task
     const id = uuidv4();
 
-    const newTask = new Task(title, dueDate, projectId, id);
+    const newTask = new Task(title, deadline, projectId, id);
     this.tasks.push(newTask);
 
     // check if a project was selected, if it was, add task to project object
@@ -38,6 +38,7 @@ class TodoController {
 
     // create project element
     createProjectElement(newProject);
+    console.log("todoController addProject");
   }
 }
 
