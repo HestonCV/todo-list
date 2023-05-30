@@ -1,3 +1,5 @@
+import projectForm from "./projectForm";
+
 function initNavBarEventListeners() {
   // collapse side bar
   const collapseIcon = document.getElementById("collapse-icon");
@@ -50,7 +52,7 @@ function initSideBarEventListeners() {
   // add project button
   const addProjectButton = document.querySelector(".project-header");
   addProjectButton.addEventListener("click", () => {
-    // TODO: get title and color from form
+    projectForm.toggleForm();
   });
 }
 

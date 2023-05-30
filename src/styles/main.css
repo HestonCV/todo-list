@@ -14,6 +14,7 @@ html, body {
   height: 100vh;
   --offwhite: rgb(242, 242, 242);
   --sidebar-font-color: rgb(43, 43, 43);
+  --theme-color: #de483a;
   overflow: hidden;
 }
 

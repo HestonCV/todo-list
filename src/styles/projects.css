@@ -13,6 +13,15 @@
   border-radius: 5px;
 }
 
+.project-header:hover {
+  background-color: rgb(225, 225, 225);
+  cursor: pointer;
+}
+
+.project-header:active {
+  background-color: rgb(230, 230, 230);
+}
+
 .project-header h1 {
   font-size: 1.2rem;
   font-weight: 500;
@@ -20,15 +29,11 @@
   padding: 0;
 }
 
-.project-header:hover {
-  background-color: rgb(225, 225, 225);
-  cursor: pointer;
-}
-
 
 .project-icons {
   color: rgb(177, 177, 177);
 }
+
 /* project styles */
 .projects {
   display: flex;
@@ -61,13 +66,19 @@
 
 /* project form styles */
 .project-form {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   padding: 10px;
   background-color: #de483a;
   border-radius: 5px;
 
+}
+
+.project-form section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px 5px;
 }
 
 .project-form label {
@@ -79,4 +90,26 @@
   outline: none;
   border-radius: 3px;
   width: 90%;
+}
+
+.project-form-submit {
+  display: flex;
+  align-items: center;
+  border: none;
+  width: 56%;
+  background-color: rgba(255, 255, 255, 0);
+  color: var(--offwhite);
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.project-form-submit:hover {
+  color: var(--theme-color);
+  background-color: var(--offwhite);
+}
+
+.project-form-submit span {
 }

@@ -44,11 +44,15 @@
 .add-task {
   display: flex;
   align-items: center;
+  padding: 5px;
+  padding-left: 3px;
+  border-radius: 5px;
   cursor: pointer;
   color: var(--sidebar-font-color)
 }
 
 .add-task:hover {
-  color: #de483a;
+  color: var(--offwhite);
+  background-color: var(--theme-color);
 }
 

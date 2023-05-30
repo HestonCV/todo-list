@@ -25,6 +25,11 @@ class ProjectForm {
       todoController.addProject(projectTitle, projectColor);
     });
   }
+
+  toggleForm() {
+    this.projectForm.style.display =
+      this.projectForm.style.display === "flex" ? "none" : "flex";
+  }
 }
 
 const projectForm = new ProjectForm();
