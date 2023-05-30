@@ -1,4 +1,4 @@
-import createElement from "./createElement";
+import { createElement } from "./createElement";
 
 function createProjectElement(project) {
   const projects = document.querySelector(".projects");

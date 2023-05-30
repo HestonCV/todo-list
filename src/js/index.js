@@ -7,11 +7,11 @@ import {
   initCompletedEventListeners,
 } from "./modules/initEventListeners";
 
-import createProjectElement from "./modules/projectsView";
 import { loadTodayView, clearView } from "./modules/loadViews";
 import todoController from "./modules/todoController";
 import projectForm from "./modules/projectForm";
 
 initNavBarEventListeners();
 initSideBarEventListeners();
+todoController.addTask("Code", 123, 0);
 projectForm.init();

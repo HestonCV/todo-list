@@ -1,4 +1,4 @@
-import createElement from "./createElement";
+import { createElement, createIcon } from "./createElement";
 
 function clearView() {
   const contentContainer = document.querySelector(".content-container");
@@ -36,12 +36,8 @@ function loadTodayView() {
     className: "add-task",
     parent: todayHeader,
   });
-  createElement({
-    element: "i",
-    className: "material-icons",
-    textContent: "add",
-    parent: addTaskButton,
-  });
+  createIcon({ textContent: "add", parent: addTaskButton });
+
   createElement({
     element: "span",
     textContent: "Add Task",

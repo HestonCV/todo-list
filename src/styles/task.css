@@ -58,3 +58,28 @@
   cursor: pointer;
   color: rgb(162, 162, 162);
 }
+
+/* task form styles */
+
+.task-form {
+  background-color: var(--theme-color);
+  padding: 20px 20px;
+  border-radius: 5px;
+}
+
+.task-form section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: right;
+  gap: 10px;
+}
+
+.task-form label {
+  color: var(--offwhite);
+}
+
+.task-form input {
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}

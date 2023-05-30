@@ -51,22 +51,22 @@
 }
 
 .color-identifier {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 100%;
   background-color: red;
 }
 
 .color-identifier2 {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 100%;
   background-color: rgb(18, 172, 224);
 }
 
 /* project form styles */
 .project-form {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 15px;
   padding: 10px;
@@ -95,13 +95,14 @@
 .project-form-submit {
   display: flex;
   align-items: center;
+  gap: 3px;
   border: none;
-  width: 56%;
   background-color: rgba(255, 255, 255, 0);
   color: var(--offwhite);
   border-radius: 5px;
   padding: 5px;
   padding-left: 3px;
+  padding-bottom: 3px;
   font-size: 1rem;
   cursor: pointer;
 }

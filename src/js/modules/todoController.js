@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 import Task from "./tasksModel";
 import Project from "./projectsModel";
 import createProjectElement from "./projectsView";
+import createTaskElement from "./tasksView";
 
 class TodoController {
   constructor() {
@@ -24,7 +25,7 @@ class TodoController {
       projectMatch.addTask(newTask);
     }
 
-    // TODO: create task element
+    createTaskElement(newTask);
   }
 
   addProject(title, color) {

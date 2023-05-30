@@ -8,9 +8,8 @@ class ProjectForm {
   init() {
     this.projectForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      console.log("test form");
-      const projectTitle = document.getElementById("projectTitle").value;
-      const projectColor = document.getElementById("projectColor").value;
+      const projectTitle = document.getElementById("project-title").value;
+      const projectColor = document.getElementById("project-color").value;
 
       // if project with same title exists, block creation and warn user
       const existingProject = todoController.projects.find(
@@ -23,6 +22,7 @@ class ProjectForm {
       }
 
       todoController.addProject(projectTitle, projectColor);
+      this.projectForm.reset();
     });
   }
 

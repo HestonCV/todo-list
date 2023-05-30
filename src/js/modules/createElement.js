@@ -1,4 +1,3 @@
-// takes object literal
 function createElement({
   element,
   className = null,
@@ -8,7 +7,16 @@ function createElement({
 }) {
   const newElement = document.createElement(element);
 
-  if (className) newElement.classList.add(className);
+  if (className) {
+    // if className is an array add all to classList
+    if (Array.isArray(className)) {
+      for (let i = 0; i < className.length; i += 1) {
+        newElement.classList.add(className[i]);
+      }
+    } else {
+      newElement.classList.add(className);
+    }
+  }
 
   if (id) newElement.id = id;
 
@@ -19,4 +27,32 @@ function createElement({
   return newElement;
 }
 
-export default createElement;
+function createIcon({ className = null, textContent = null, parent = null }) {
+  if (className) {
+    // if className is array add materials-icon
+    if (Array.isArray(className)) {
+      className.unshift("material-icons");
+    } else {
+      // uses shorthand for textContent and parent
+      const newIcon = createElement({
+        element: "i",
+        className: ["material-icons", className],
+        textContent,
+        parent,
+      });
+
+      return newIcon;
+    }
+  }
+  // uses shorthand for textContent, className, parent
+  const newIcon = createElement({
+    element: "i",
+    className: "material-icons",
+    textContent,
+    parent,
+  });
+
+  return newIcon;
+}
+
+export { createElement, createIcon };
