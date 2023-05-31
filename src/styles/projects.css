@@ -39,9 +39,8 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  background-color: rgb(232, 232, 232);
   padding: 8px 5px;
-  border-radius: 5px;
+  border-bottom: 1px solid rgb(200, 200, 200);
 }
 
 .project {
@@ -54,21 +53,13 @@
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  background-color: red;
-}
-
-.color-identifier2 {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background-color: rgb(18, 172, 224);
 }
 
 /* project form styles */
 .project-form {
   display: none;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   padding: 10px;
   background-color: #de483a;
   border-radius: 5px;
@@ -91,18 +82,15 @@
   border-radius: 3px;
   width: 90%;
 }
-
 .project-form-submit {
-  display: flex;
-  align-items: center;
-  gap: 3px;
+  width: 20%;
+  align-self: center;
   border: none;
   background-color: rgba(255, 255, 255, 0);
   color: var(--offwhite);
   border-radius: 5px;
-  padding: 5px;
-  padding-left: 3px;
-  padding-bottom: 3px;
+  padding: 3px;
+  padding-bottom: 0;
   font-size: 1rem;
   cursor: pointer;
 }

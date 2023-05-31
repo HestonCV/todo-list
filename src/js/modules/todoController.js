@@ -18,13 +18,13 @@ class TodoController {
     this.tasks.push(newTask);
 
     // check if a project was selected, if it was, add task to project object
-    if (projectId !== 0) {
+    if (projectId !== "0") {
       const projectMatch = this.projects.find(
         (project) => project.id === projectId
       );
       projectMatch.addTask(newTask);
     }
-
+    console.log("test addtask");
     createTaskElement(newTask);
   }
 

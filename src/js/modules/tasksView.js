@@ -1,13 +1,29 @@
 import { createElement, createIcon } from "./createElement";
+import todoController from "./todoController";
 
 function getProjectTitle(task) {
-  // TODO
-  return "Personal";
+  // if no project selected
+  if (task.project === "0") {
+    return "None";
+  }
+
+  // find the project with the matching id and return its title
+  const taskProject = todoController.projects.find(
+    (project) => project.id === task.project
+  );
+  return taskProject.title;
 }
 
 function getProjectColor(task) {
-  // TODO
-  return "red";
+  // if no project selected
+  if (task.project === "0") {
+    return "rgb(117, 117, 117)";
+  }
+
+  const taskProject = todoController.projects.find(
+    (project) => project.id === task.project
+  );
+  return taskProject.color;
 }
 
 function createTaskElement(task) {
@@ -61,11 +77,12 @@ function createTaskElement(task) {
     textContent: "edit",
     parent: taskRight,
   });
-  createIcon({
+  const deadlineIcon = createIcon({
     className: "task-buttons",
     textContent: "date_range",
     parent: taskRight,
   });
+  deadlineIcon.title = task.deadline;
   createIcon({
     className: "task-buttons",
     textContent: "delete",

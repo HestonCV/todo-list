@@ -8,15 +8,19 @@ class TaskForm {
   }
 
   init() {
+    this.taskForm = document.querySelector(".task-form");
+    this.projectSelect = document.getElementById("task-project");
+
     this.taskForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
       const taskTitle = document.getElementById("task-title").value;
       const taskDeadline = document.getElementById("task-deadline").value;
       const taskProject = document.getElementById("task-project").value;
-
+      console.log(taskDeadline);
       todoController.addTask(taskTitle, taskDeadline, taskProject);
       this.taskForm.reset();
+      this.toggleForm();
     });
   }
 
@@ -48,7 +52,7 @@ class TaskForm {
 
   toggleForm() {
     this.taskForm.style.display =
-      this.taskForm.style.display === "block" ? "none" : "block";
+      this.taskForm.style.display === "flex" ? "none" : "flex";
   }
 }
 

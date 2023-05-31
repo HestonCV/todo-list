@@ -1,4 +1,5 @@
 import projectForm from "./projectForm";
+import taskForm from "./taskForm";
 
 function initNavBarEventListeners() {
   // collapse side bar
@@ -59,7 +60,7 @@ function initSideBarEventListeners() {
 function initTodayEventListeners() {
   const addTaskButton = document.querySelector(".add-task");
   addTaskButton.addEventListener("click", () => {
-    // TODO: call add task module
+    taskForm.toggleForm();
     console.log("add task");
   });
 }

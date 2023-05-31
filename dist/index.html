@@ -34,78 +34,23 @@
             <h1>Projects</h1>
             <i class="material-icons project-icons">create_new_folder</i>
           </div>
-          <form action="" class="project-form">
+          <form class="project-form" autocomplete="off">
             <section>
               <label for="project-title">Name</label>
               <input type="text" id="project-title">
               <label for="project-color">Color</label>
-              <input type="text" id="project-color">
+              <input type="color" id="project-color" value="#FFFFFF">
             </section>
             <button type="submit" class="project-form-submit">
               <i class="material-icons">add</i>
-              <span>Add Project</span>
             </button>
           </form>
           <div class="projects">
-            <div class="project">
-              <span class="color-identifier"></span>
-              <span class="project-name">Personal</span>
-            </div>
-            <div class="project">
-              <span class="color-identifier2"></span>
-              <span class="project-name">Home</span>
-            </div>
           </div>
         </div>
       </div>
       <div class="right">
         <div class="content-container">
-          <div class="today-header">
-            <div class="todays-date">
-              <h1>Today</h1>
-              <span>Sat May 27</span>
-            </div>
-            <div class="add-task"><i class="material-icons">add</i><span>Add Task</span></div> <!-- left off here -->
-          </div>
-          <form action="" class="task-form">
-            <section>
-              <label for="task-title">Name</label>
-              <input type="text" id="task-title">
-              <label for="task-project">Project</label>
-              <select id="task-project">
-                <option value="0">None</option> <!-- This is your default option -->
-              </select>
-              <label for="task-deadline">Deadline</label>
-              <input type="text" id="task-deadline">
-            </section>
-            <button type="submit"></button>
-          </form>
-          <div class="task-container">
-            <div class="task">
-              <div class="left">
-                <i class="material-icons checked">radio_button_unchecked</i>
-                <span class="task-name">Clean Dishes</span>
-              </div>
-              <div class="right">
-                <i class="material-icons project-indicator" title="Personal">folder</i>
-                <i class="material-icons task-buttons">edit</i>
-                <i class="material-icons task-buttons">date_range</i>
-                <i class="material-icons task-buttons">delete</i>
-              </div>
-            </div>
-            <div class="task">
-              <div class="left">
-                <i class="material-icons checked">radio_button_unchecked</i>
-                <span class="task-name">Wash Clothes</span>
-              </div>
-              <div class="right">
-                <i class="material-icons project-indicator2" title="Home">folder</i>
-                <i class="material-icons task-buttons">edit</i>
-                <i class="material-icons task-buttons">date_range</i>
-                <i class="material-icons task-buttons">delete</i>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div class="footer">

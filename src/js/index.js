@@ -10,8 +10,12 @@ import {
 import { loadTodayView, clearView } from "./modules/loadViews";
 import todoController from "./modules/todoController";
 import projectForm from "./modules/projectForm";
+import taskForm from "./modules/taskForm";
 
 initNavBarEventListeners();
 initSideBarEventListeners();
-todoController.addTask("Code", 123, 0);
 projectForm.init();
+clearView();
+loadTodayView();
+initTodayEventListeners();
+taskForm.init();

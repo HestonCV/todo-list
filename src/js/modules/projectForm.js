@@ -23,6 +23,7 @@ class ProjectForm {
 
       todoController.addProject(projectTitle, projectColor);
       this.projectForm.reset();
+      this.toggleForm();
     });
   }
 
