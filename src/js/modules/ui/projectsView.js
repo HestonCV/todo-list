@@ -1,5 +1,5 @@
 import { createElement } from "./createElement";
-import taskForm from "./taskForm";
+import taskForm from "../modals/taskForm";
 
 function createProjectElement(project) {
   const projects = document.querySelector(".projects");

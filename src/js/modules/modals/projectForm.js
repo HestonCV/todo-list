@@ -1,4 +1,4 @@
-import todoController from "./todoController";
+import todoController from "../logic/todoController";
 
 class ProjectForm {
   constructor() {

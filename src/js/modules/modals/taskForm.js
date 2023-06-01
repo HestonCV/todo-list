@@ -1,5 +1,5 @@
-import { createElement } from "./createElement";
-import todoController from "./todoController";
+import { createElement } from "../ui/createElement";
+import todoController from "../logic/todoController";
 
 class TaskForm {
   constructor() {
