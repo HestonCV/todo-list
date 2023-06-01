@@ -1,10 +1,51 @@
-import { v4 as uuidv4 } from "uuid";
+import generateUUID from "./uuid";
 import Task from "./tasksModel";
 import Project from "./projectsModel";
 import createProjectElement from "./projectsView";
 import createTaskElement from "./tasksView";
 
+/* new TodoController */
 class TodoController {
+  constructor() {
+    this.taskManager = new TaskManager();
+    this.projectManager = new ProjectManager();
+  }
+
+  createTask(title, deadline, projectId) {
+    const id = generateUUID();
+    let project = null;
+
+    // if projectId exists get project object
+    if(projectId) {
+      project = projectManager.getProjectById(projectId);
+
+      // check if project exists
+      if(!project) {
+        throw new Error("Project with given ID not found.")
+      }
+    } 
+
+    this.taskManager.addTask(title, deadline, project, id);
+    // TODO: update UI
+    return;
+  }
+
+  removeTask(taskId) {
+    this.taskManager.removeTask(taskId);
+    // TODO: update UI
+    return;
+  }
+
+  createProject(title, color) {
+    const id = generateUUID();
+    this.projectManager.addProject(title, color, id);
+    // TODO: update UI
+    return;
+  }
+}
+
+
+clas _TodoController {
   constructor() {
     this.tasks = [];
     this.projects = [];
@@ -42,6 +83,6 @@ class TodoController {
   }
 }
 
-const todoController = new TodoController();
+const todoController = new _TodoController();
 
 export default todoController;
