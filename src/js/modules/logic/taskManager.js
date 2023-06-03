@@ -1,5 +1,4 @@
 import Task from "./tasksModel";
-import projectManager from "./projectManager";
 import generateUUID from "./uuid";
 
 class TaskManager {
@@ -11,7 +10,7 @@ class TaskManager {
     const id = generateUUID();
     const newTask = new Task(title, deadline, projectId, id);
     this.tasks.push(newTask);
-    projectManager.addTaskToProject(newTask);
+    return newTask();
   }
 
   removeTask(taskId) {

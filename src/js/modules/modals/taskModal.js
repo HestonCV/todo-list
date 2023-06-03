@@ -1,7 +1,7 @@
 import { createElement } from "../ui/createElement";
-import todoController from "../logic/todoController";
+import todoController from "../logic/applicationController";
 
-class TaskForm {
+class TaskModal {
   constructor() {
     this.taskForm = document.querySelector(".task-form");
     this.projectSelect = document.getElementById("task-project");
@@ -56,6 +56,4 @@ class TaskForm {
   }
 }
 
-const taskForm = new TaskForm();
-
-export default taskForm;
+export default TaskModal;

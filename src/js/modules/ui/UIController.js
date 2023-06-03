@@ -1,47 +1,32 @@
 import TodayView from "./todayView";
 import UpcomingView from "./upcomingView";
 import CompletedView from "./completedView";
-import taskManager from "../logic/taskManager";
-import projectManager from "../logic/projectManager";
-import EventListenerController from "../logic/eventListenerController";
+import taskProjectManager from "../logic/taskProjectManager";
 
 class UIController {
   constructor() {
-    this.currentPage = "today";
     this.contentContainer = document.getElementById("content-container");
-    this.eventListenerController = new EventListenerController();
-    this.init();
-
     this.todayView = new TodayView();
-    this.upcomingView = new UpcomingView();
-    this.completedView = new CompletedView();
+    /* this.upcomingView = new UpcomingView();
+    this.completedView = new CompletedView(); */
   }
 
-  init() {
-    this.eventListenerController.initBaseEventListeners();
-  }
-
-  changePage(page) {
-    this.currentPage = page;
-    this.updatePage();
-  }
-
-  updatePage() {
+  updatePage(page) {
     this.clearPage();
-    switch (this.currentPage) {
+    switch (page) {
       case "today":
-        this.todayView.render(taskManager.tasks);
-        this.eventListenerController.initTodayEventListeners();
+        this.todayView.render(taskProjectManager.taskManager.tasks);
+        /* this.taskModal.update(taskProjectManager.projectManager.projects); */
         break;
 
       case "upcoming":
-        this.upcomingView.render(taskManager.tasks);
-        this.eventListenerController.initUpcomingEventListeners();
+        // this.upcomingView.render(taskManager.tasks);
+        // this.eventListenerController.initUpcomingEventListeners();
         break;
 
       case "completed":
-        this.completedView.render(taskManager.tasks);
-        this.eventListenerController.initCompletedEventListeners();
+        // this.completedView.render(taskManager.tasks);
+        // this.eventListenerController.initCompletedEventListeners();
         break;
 
       default:

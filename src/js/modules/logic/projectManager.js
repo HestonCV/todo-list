@@ -1,5 +1,6 @@
 import Project from "./projectModel";
 import generateUUID from "./uuid";
+import createProjectElement from "../ui/projectView";
 
 class ProjectManager {
   constructor() {
@@ -9,7 +10,17 @@ class ProjectManager {
   addProject(title, color) {
     const id = generateUUID();
     const newProject = new Project(title, color, id);
+    createProjectElement(newProject);
     this.projects.push(newProject);
+  }
+
+  removeProject(projectId) {
+    // remove project with matching id
+    for (let i = 0; i < this.projects.length; i += 1) {
+      if (this.projects[i].id === projectId) {
+        Array.splice(i, 1);
+      }
+    }
   }
 
   addTaskToProject(task) {
@@ -26,5 +37,4 @@ class ProjectManager {
   }
 }
 
-const projectManager = new ProjectManager();
-export default projectManager;
+export default ProjectManager;

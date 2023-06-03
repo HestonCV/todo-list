@@ -1,8 +1,34 @@
-import projectForm from "./projectForm";
-import taskForm from "./taskForm";
+/* import taskForm from "../modals/taskForm"; */
 /* eslint-disable class-methods-use-this */
 
 class EventListenerController {
+  constructor() {
+    this.initBaseEventListeners();
+  }
+
+  updatePage(page) {
+    switch (page) {
+      case "today":
+        this.initTodayEventListeners();
+        break;
+
+      case "upcoming":
+        // this.upcomingView.render(taskManager.tasks);
+        // this.eventListenerController.initUpcomingEventListeners();
+        break;
+
+      case "completed":
+        // this.completedView.render(taskManager.tasks);
+        // this.eventListenerController.initCompletedEventListeners();
+        break;
+
+      default:
+        throw new Error(
+          "Incorrect page provided. Must be 'today', 'upcoming', or 'completed'."
+        );
+    }
+  }
+
   initBaseEventListeners() {
     this.initNavBarEventListeners();
     this.initSideBarEventListeners();
@@ -12,7 +38,6 @@ class EventListenerController {
     const addTaskButton = document.getElementById("add-task");
     addTaskButton.addEventListener("click", () => {
       // TODO:
-      taskForm.toggleForm();
       console.log("add task");
     });
   }
@@ -45,31 +70,12 @@ class EventListenerController {
   }
 
   initSideBarEventListeners() {
-    // today view button
-    const todayViewButton = document.getElementById("today");
-    todayViewButton.addEventListener("click", () => {
-      // TODO: load today page
-      console.log("today view");
-    });
-
-    // upcoming view button
-    const upcomingViewButton = document.getElementById("upcoming");
-    upcomingViewButton.addEventListener("click", () => {
-      // TODO: load upcoming page
-      console.log("upcoming view");
-    });
-
-    // completed view button
-    const completedViewButton = document.getElementById("completed");
-    completedViewButton.addEventListener("click", () => {
-      // TODO: load completed view button
-      console.log("completed view");
-    });
-
     // add project button
     const addProjectButton = document.querySelector(".project-header");
     addProjectButton.addEventListener("click", () => {
-      projectForm.toggleForm();
+      const projectForm = document.getElementById("project-form");
+      projectForm.style.display =
+        projectForm.style.display === "flex" ? "none" : "flex";
     });
   }
 }

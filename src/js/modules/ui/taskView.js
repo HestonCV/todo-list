@@ -1,10 +1,9 @@
 import { createElement, createIcon } from "./createElement";
-import todoController from "../logic/todoController";
-import projectManager from "../logic/projectManager";
+import taskProjectManager from "../logic/taskProjectManager";
 
 class TaskView {
   constructor() {
-    this.taskContainer = document.getElementById("task-container");
+    this.taskContainer = null;
   }
 
   createTaskElement(page, task) {
@@ -26,6 +25,8 @@ class TaskView {
   }
 
   createTodayTaskElement(task) {
+    this.taskContainer = document.getElementById("task-container");
+
     // create task element
     const newTask = createElement({
       element: "div",
@@ -68,7 +69,9 @@ class TaskView {
 
     // if projectId exists get project details
     if (task.projectId) {
-      const project = projectManager.getProjectById(task.projectId);
+      const project = taskProjectManager.projectManager.getProjectById(
+        task.projectId
+      );
 
       projectIndicator.style.color = project.color;
       projectIndicator.title = project.title;

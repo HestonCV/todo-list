@@ -61,4 +61,4 @@ class TodayView {
   }
 }
 
-export default TodayView();
+export default TodayView;
